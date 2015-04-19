@@ -78,11 +78,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LrItem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Production.cpp" />
     <ClCompile Include="Symbol.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LrItem.h" />
     <ClInclude Include="Production.h" />
     <ClInclude Include="Symbol.h" />
   </ItemGroup>

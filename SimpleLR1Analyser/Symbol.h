@@ -42,4 +42,14 @@ namespace std {
 		}
 	};
 
+	std::ostream& operator<< (std::ostream& out, Sequence sequence)
+	{
+		for each (Symbol symbol in sequence)
+		{
+			out << symbol;
+		}
+		return out;
+	}
+
 }
+
