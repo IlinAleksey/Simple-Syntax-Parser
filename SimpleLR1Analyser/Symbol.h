@@ -2,13 +2,12 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include <vector>
 class Symbol
 {
-	
-public:
 	bool terminal;
 	int index;
-
+public:
 	Symbol() : terminal(true), index(0){}
 	Symbol(bool terminal, int index) : terminal(terminal), index(index){}
 	~Symbol();
@@ -16,7 +15,16 @@ public:
 	{
 		return (terminal == other.terminal) && (index == other.index);
 	}
+	friend std::ostream& operator<< (std::ostream& out, Symbol symbol)
+	{
+		out << '(' << int(symbol.is_terminal()) << ", " << symbol.get_value() << ')';
+		return out;
+	}
+	bool is_terminal() const{ return terminal; }
+	int get_value() const{ return index; }
 };
+
+typedef std::vector<Symbol> Sequence;
 
 namespace std {
 
@@ -29,8 +37,8 @@ namespace std {
 			using std::hash;
 			using std::string;
 
-			return ((hash<int>()(k.terminal + 1)
-				^ (hash<int>()(k.index) << 1)) >> 1);
+			return ((hash<int>()(k.is_terminal() + 1)
+				^ (hash<int>()(k.get_value()) << 1)) >> 1);
 		}
 	};
 
