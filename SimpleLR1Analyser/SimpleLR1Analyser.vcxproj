@@ -80,13 +80,25 @@
   <ItemGroup>
     <ClCompile Include="LrItem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Oracle.cpp" />
+    <ClCompile Include="OracleBuilder.cpp" />
     <ClCompile Include="Production.cpp" />
+    <ClCompile Include="ProductionLexer.cpp" />
     <ClCompile Include="Symbol.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LrItem.h" />
+    <ClInclude Include="Oracle.h" />
+    <ClInclude Include="OracleBuilder.h" />
     <ClInclude Include="Production.h" />
+    <ClInclude Include="ProductionLexer.h" />
     <ClInclude Include="Symbol.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

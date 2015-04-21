@@ -52,5 +52,54 @@ public:
 		out << "; " << lritem.lookahead << "]";
 		return out;
 	}
+	bool operator<(const LrItem& lritem) const
+	{
+
+		if (lhs < lritem.lhs)
+		{
+			return true;
+		}
+		else if (lhs > lritem.lhs)
+		{
+			return false;
+		}
+		if (rhs.size() < lritem.rhs.size())
+		{
+			return true;
+		}
+		else if (rhs.size() > lritem.rhs.size())
+		{
+			return false;
+		}
+		for (int i = 0; i < rhs.size(); i++)
+		{
+			if (rhs[i] < lritem.rhs[i])
+			{
+				return true;
+			}
+			else if (rhs[i] > lritem.rhs[i])
+			{
+				return false;
+			}
+		}
+		if (position < lritem.position)
+		{
+			return true;
+		}
+		else if (position > lritem.position)
+		{
+			return false;
+		}
+		if (lookahead < lritem.lookahead)
+		{
+			return true;
+		}
+		return false;
+	}
+	bool operator==(const LrItem& lritem) const
+	{
+		return lritem.lhs == lhs && rhs == lritem.rhs && lookahead == lritem.lookahead &&  position == lritem.position;
+	}
+	void shift_position(){ position++; }
 };
 

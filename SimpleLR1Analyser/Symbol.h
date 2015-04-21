@@ -8,10 +8,56 @@ class Symbol
 	bool terminal;
 	int index;
 public:
-	Symbol() : terminal(true), index(0){}
+	Symbol() : terminal(true), index(-1){}
 	Symbol(bool terminal, int index) : terminal(terminal), index(index){}
 	~Symbol();
-	bool operator==(const Symbol& other)
+	bool operator<(const Symbol& other) const
+	{
+		if (terminal < other.terminal)
+		{
+			return true;
+		}
+		else if (terminal > other.terminal)
+		{
+			return false;
+		}
+		if (index < other.index)
+		{
+			return true;
+		}
+		return false;
+	}
+	bool operator>(const Symbol& other) const
+	{
+		if (terminal > other.terminal)
+		{
+			return true;
+		}
+		else if (terminal < other.terminal)
+		{
+			return false;
+		}
+		if (index > other.index)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool operator<=(const Symbol& other) const
+	{
+		if (terminal <= other.terminal)
+		{
+			return true;
+		}
+		if (index <= other.index)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool operator== (const Symbol& other) const
 	{
 		return (terminal == other.terminal) && (index == other.index);
 	}
@@ -22,6 +68,7 @@ public:
 	}
 	bool is_terminal() const{ return terminal; }
 	int get_value() const{ return index; }
+	bool is_empty() const{ return terminal && index == -1; }
 };
 
 typedef std::vector<Symbol> Sequence;

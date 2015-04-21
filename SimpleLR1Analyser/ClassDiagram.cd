@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LrItem" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAABAAAAIAAQAAAAEgAAAAAhAAQAAAA=</HashCode>
+      <FileName>LrItem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oracle" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAEAAAAAAAAAAIAABCAAAAAAEAAAAIAAAAAAA=</HashCode>
+      <FileName>Oracle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OracleBuilder">
+    <Position X="11.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAgRFAAAACABAYAEpAAJAABEAAEQAIBAQAACAA=</HashCode>
+      <FileName>OracleBuilder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Production" Collapsed="true">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAQAAABAAAAAAAAEQAAABAABAAECAAAAAAA=</HashCode>
+      <FileName>Production.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProductionLexer" Collapsed="true">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASIBAEQAAAoQABFVAAFck1EBCAEGAfCAgAAAJICAA=</HashCode>
+      <FileName>ProductionLexer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Symbol" Collapsed="true">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAQAAQAAAACAAAAAAQAgAAQBCAA=</HashCode>
+      <FileName>Symbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="OracleAction" Collapsed="true">
+    <Position X="6.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACBACAAIAAAAAAAAAA=</HashCode>
+      <FileName>Oracle.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ProductionLexerError" Collapsed="true">
+    <Position X="2.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionLexer.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TransliteratorToken" Collapsed="true">
+    <Position X="2.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionLexer.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="std::hash&lt;Symbol&gt;" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Symbol.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="OracleTable" Collapsed="true">
+    <Position X="6.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Oracle.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="lexer_method" Collapsed="true">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionLexer.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Sequence" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Symbol.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="OracleActionType" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACAAAAAAAAAEAAAAAAAEAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Oracle.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TransliteratorClass" Collapsed="true">
+    <Position X="2.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAACAACAAACgAACAAAIAAABAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ProductionLexer.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="State" Collapsed="true">
+    <Position X="2.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAECMAkACAAAGAfAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionLexer.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SymbolClass" Collapsed="true">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionLexer.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -25,6 +25,7 @@ public:
 		}
 		return out;
 	}
+	void clear(){ rhs.clear(); }
 	
 };
 
