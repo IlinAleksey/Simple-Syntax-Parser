@@ -23,7 +23,6 @@ public:
 		}
 	}
 	Symbol get_lookahead() const { return lookahead; }
-	int get_position() const { return position; }
 	Sequence get_suffix() const {
 		if (position+1 >= rhs.size())
 		{
@@ -102,7 +101,5 @@ public:
 		return lritem.lhs == lhs && rhs == lritem.rhs && lookahead == lritem.lookahead &&  position == lritem.position;
 	}
 	void shift_position(){ position++; }
-
-	Production to_production(){ return Production(lhs, rhs); }
 };
 

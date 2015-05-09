@@ -12,8 +12,6 @@ struct OracleAction
 	OracleActionType type;
 	int value;
 	
-	
-
 	bool is_empty() { if (type == OracleActionType::error) return true; else return false; }
 
 	friend std::ostream& operator<< (std::ostream& out, OracleAction oracle_action)
