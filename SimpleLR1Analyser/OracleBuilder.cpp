@@ -3,12 +3,12 @@
 #include <stack>
 #include <queue>
 
-OracleBuilder::OracleBuilder()
+OracleBuilder::OracleBuilder() : isLRgrammar(true)
 {
 }
 
 
-OracleBuilder::~OracleBuilder()
+OracleBuilder::~OracleBuilder() 
 {
 }
 
@@ -353,7 +353,7 @@ void OracleBuilder::build_oracle(std::string filename)
 				}
 				else
 				{
-					std::cout << "not LR(1) grammar";
+					isLRgrammar = false;
 					return;
 				}
 				
@@ -387,6 +387,11 @@ int OracleBuilder::match_production(const Production production_to_match) const
 
 std::ostream& operator<<(std::ostream& out, const OracleBuilder& oracle_builder)
 {
+	if (oracle_builder.isLRgrammar == false)
+	{
+		out << "Not an LR(1) grammar" << std::endl;
+		return out;
+	}
 	out << oracle_builder.production_list_to_string() << std::endl;
 	out << oracle_builder.first_sets_to_string() << std::endl;
 	for (size_t i = 0; i < oracle_builder.states.size(); i++)
@@ -419,5 +424,6 @@ std::ostream& operator<<(std::ostream& out, const OracleBuilder& oracle_builder)
 		out << "}" << std::endl;
 	}
 	out << oracle_builder.oracle << std::endl;
+	out << "LR(1) grammar" << std::endl;
 	return out;
 }

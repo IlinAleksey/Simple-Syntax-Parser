@@ -9,7 +9,7 @@
 
 int main()
 {
-	OracleBuilder oracle_builder;
+	/*OracleBuilder oracle_builder;
 	oracle_builder.parse_productions("data.txt");
 	std::cout << oracle_builder.production_list_to_string() << std::endl;
 	oracle_builder.build_first_sets();
@@ -24,7 +24,7 @@ int main()
 	for each (LrItem lritem in initial_state)
 	{
 		std::cout << lritem << ", ";
-	}
+	}*/
 
 	OracleBuilder oracle_builder2;
 	oracle_builder2.build_oracle("data.txt");

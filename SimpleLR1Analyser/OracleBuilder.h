@@ -50,6 +50,8 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& out, const OracleBuilder& oracle_builder);
 
+	bool isLRgrammar;
+
 	//degunning
 	void build_first_sets();
 };
