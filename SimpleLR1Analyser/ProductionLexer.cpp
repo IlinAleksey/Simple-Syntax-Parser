@@ -9,6 +9,7 @@ terminal_symbols_size(0),
 nonterminal_symbols_size(0),
 current_state(State::A1)
 {
+	fsm_table[State::A1][TransliteratorClass::symbol] = &ProductionLexer::stay;
 	fsm_table[State::A1][TransliteratorClass::less] = &ProductionLexer::B1a;
 	fsm_table[State::A1][TransliteratorClass::whitespace] = &ProductionLexer::stay;
 	fsm_table[State::A1][TransliteratorClass::newline] = &ProductionLexer::stay;
@@ -208,7 +209,7 @@ void ProductionLexer::add_production()
 }
 void ProductionLexer::error_method(TransliteratorToken value)
 {
-	error_list.push_back({ current_column, current_row });
+	error_list.push_back({ current_row, current_column });
 }
 
 void ProductionLexer::exit_good(TransliteratorToken value)
