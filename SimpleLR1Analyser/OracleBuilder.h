@@ -26,6 +26,7 @@ public:
 	bool change_set(std::set<Symbol>& left, const std::set<Symbol>& right);
 
 	int match_state(std::set<LrItem> state_to_match);
+	int match_production(const Production production_to_match) const;
 
 	OracleBuilder();
 	~OracleBuilder();

@@ -25,6 +25,10 @@ public:
 		}
 		return out;
 	}
+	bool operator==(const Production& production) const
+	{
+		return production.lhs == lhs && rhs == production.rhs;
+	}
 	void clear(){ rhs.clear(); }
 	
 };
