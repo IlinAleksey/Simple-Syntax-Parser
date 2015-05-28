@@ -80,8 +80,9 @@ std::set<Symbol> OracleBuilder::first(Sequence sequence)
 	{
 		std::set<Symbol> new_itemset = first_sets[symbol];
 		result = set_union(result, new_itemset);
-		if (contains_empty(new_itemset))
+		if (!contains_empty(new_itemset))
 		{
+			remove_empty_character(new_itemset);
 			break;
 		}
 	}
@@ -353,6 +354,7 @@ void OracleBuilder::build_oracle(std::string filename)
 				}
 				else
 				{
+					std::cout << i << " " << lritem << std::endl;
 					isLRgrammar = false;
 					return;
 				}
