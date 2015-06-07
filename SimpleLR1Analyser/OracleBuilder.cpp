@@ -240,7 +240,13 @@ std::string OracleBuilder::symbol_to_string(Symbol symbol) const
 
 void OracleBuilder::build_oracle(std::string filename)
 {
-	production_lexer.parse_productions(filename);
+
+	int errors = production_lexer.parse_productions(filename);
+	if (errors)
+	{
+		std::cout << "check lexical errors" << std::endl;
+		return;
+	}
 	build_first_sets();
 
 	std::queue<std::set<LrItem>> states_to_transition;

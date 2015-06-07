@@ -7,13 +7,14 @@ current_row(0),
 current_column(0),
 terminal_symbols_size(0),
 nonterminal_symbols_size(0),
-current_state(State::A1)
+current_state(State::A1),
+result(0)
 {
 	fsm_table[State::A1][TransliteratorClass::symbol] = &ProductionLexer::stay;
 	fsm_table[State::A1][TransliteratorClass::less] = &ProductionLexer::B1a;
 	fsm_table[State::A1][TransliteratorClass::whitespace] = &ProductionLexer::stay;
 	fsm_table[State::A1][TransliteratorClass::newline] = &ProductionLexer::stay;
-	fsm_table[State::A1][TransliteratorClass::end] = &ProductionLexer::exit_bad;
+	fsm_table[State::A1][TransliteratorClass::end] = &ProductionLexer::exit_good;
 
 	fsm_table[State::B1][TransliteratorClass::symbol] = &ProductionLexer::B2a;
 	fsm_table[State::B1][TransliteratorClass::whitespace] = &ProductionLexer::stay;
@@ -217,6 +218,7 @@ void ProductionLexer::exit_good(TransliteratorToken value)
 	if (error_list.empty())
 	{
 		result = 0;
+		return;
 	}
 	result = 1;
 }
@@ -285,6 +287,7 @@ int ProductionLexer::parse_productions(std::string filename)
 	}
 	(this->*fsm_table[current_state][TransliteratorClass::end])({ end, 0 });
 	in.close();
+	
 	return result;
 }
 

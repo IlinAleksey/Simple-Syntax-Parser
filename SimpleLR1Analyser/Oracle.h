@@ -33,7 +33,7 @@ typedef std::vector<std::vector<OracleAction>> OracleTable;
 
 class Oracle
 {
-	static const int cell_width = 7;
+	static const int cell_width = 10;
 	OracleTable sr_table;
 	OracleTable goto_table;
 public:
